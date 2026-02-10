@@ -1,0 +1,159 @@
+<<<<<<< HEAD
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Find Work - SkillSync India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+  </head>
+  <body>
+    <nav class="nav-compact container">
+      <a class="brand" href="index.html">SkillSync<span class="dot">.</span></a>
+      <div class="nav-compact-actions">
+        <a class="btn btn-ghost" href="index.html">Home</a>
+        <a class="btn btn-primary" href="postproject.html">Post Project</a>
+      </div>
+    </nav>
+
+    <main class="container section">
+      <div class="center-card">
+        <h1>Find opportunities matched to your skills</h1>
+        <p class="muted">Enter your core skills and experience level. We'll surface projects that fit.</p>
+
+        <div class="card form-card">
+          <form id="findForm">
+            <label class="label">Skills</label>
+            <input id="freelancerSkills" class="form-input" placeholder="React, Node.js, UI/UX, Python">
+
+            <div class="form-row">
+              <div>
+                <label class="label">Experience</label>
+                <select id="freelancerExperience" class="form-input">
+                  <option value="">Select</option>
+                  <option>Less than 1 year</option>
+                  <option>1-2 years</option>
+                  <option>3-5 years</option>
+                  <option>5+ years</option>
+                </select>
+              </div>
+              <div>
+                <label class="label">Job type</label>
+                <select id="jobType" class="form-input">
+                  <option value="">Select</option>
+                  <option>Short-term</option>
+                  <option>Long-term</option>
+                  <option>Part-time</option>
+                  <option>Full-time</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="matchBtn" type="button" class="btn btn-primary w-100">Find Matches</button>
+          </form>
+        </div>
+
+        <div id="matches" class="mt-4"></div>
+      </div>
+    </main>
+
+    <!-- Chatbot widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+      <div class="chatbot-header">
+        <h3>SkillSync AI</h3>
+        <button id="chatbot-close" class="chatbot-close">✕</button>
+      </div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="message bot">Hi! 👋 I'm the SkillSync AI assistant. How can I help?</div>
+      </div>
+      <input id="chatbot-input" class="chatbot-input" placeholder="Ask me anything...">
+    </div>
+    <button id="chatbot-toggle" class="chatbot-toggle">💬 Chat</button>
+
+    <canvas id="sparkCanvas" style="position:fixed;left:0;top:0;width:100%;height:100%;display:block;pointer-events:none;z-index:9999;background:rgba(0,0,0,0.01);"></canvas>
+    <script src="js/main.js?v=1"></script>
+    <script src="js/app.js?v=4"></script>
+    <script src="js/chatbot.js?v=1"></script>
+  </body>
+</html>
+=======
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Find Work - SkillSync India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+  </head>
+  <body>
+    <nav class="nav-compact container">
+      <a class="brand" href="index.html">SkillSync<span class="dot">.</span></a>
+      <div class="nav-compact-actions">
+        <a class="btn btn-ghost" href="index.html">Home</a>
+        <a class="btn btn-primary" href="postproject.html">Post Project</a>
+      </div>
+    </nav>
+
+    <main class="container section">
+      <div class="center-card">
+        <h1>Find opportunities matched to your skills</h1>
+        <p class="muted">Enter your core skills and experience level. We'll surface projects that fit.</p>
+
+        <div class="card form-card">
+          <form id="findForm">
+            <label class="label">Skills</label>
+            <input id="freelancerSkills" class="form-input" placeholder="React, Node.js, UI/UX, Python">
+
+            <div class="form-row">
+              <div>
+                <label class="label">Experience</label>
+                <select id="freelancerExperience" class="form-input">
+                  <option value="">Select</option>
+                  <option>Less than 1 year</option>
+                  <option>1-2 years</option>
+                  <option>3-5 years</option>
+                  <option>5+ years</option>
+                </select>
+              </div>
+              <div>
+                <label class="label">Job type</label>
+                <select id="jobType" class="form-input">
+                  <option value="">Select</option>
+                  <option>Short-term</option>
+                  <option>Long-term</option>
+                  <option>Part-time</option>
+                  <option>Full-time</option>
+                </select>
+              </div>
+            </div>
+
+            <button id="matchBtn" type="button" class="btn btn-primary w-100">Find Matches</button>
+          </form>
+        </div>
+
+        <div id="matches" class="mt-4"></div>
+      </div>
+    </main>
+
+    <!-- Chatbot widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+      <div class="chatbot-header">
+        <h3>SkillSync AI</h3>
+        <button id="chatbot-close" class="chatbot-close">✕</button>
+      </div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="message bot">Hi! 👋 I'm the SkillSync AI assistant. How can I help?</div>
+      </div>
+      <input id="chatbot-input" class="chatbot-input" placeholder="Ask me anything...">
+    </div>
+    <button id="chatbot-toggle" class="chatbot-toggle">💬 Chat</button>
+
+    <canvas id="sparkCanvas" style="position:fixed;left:0;top:0;width:100%;height:100%;display:block;pointer-events:none;z-index:9999;background:rgba(0,0,0,0.01);"></canvas>
+    <script src="js/main.js?v=1"></script>
+    <script src="js/app.js?v=4"></script>
+    <script src="js/chatbot.js?v=1"></script>
+  </body>
+</html>
+>>>>>>> 96e5cb886491b9db5c213b48882848bcf97d800d
