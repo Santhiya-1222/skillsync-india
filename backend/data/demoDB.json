@@ -1,0 +1,288 @@
+{
+  "projects": [
+    {
+      "id": "fe65e03b-3bf0-45f4-9cea-2e53cb7560cf",
+      "title": "Test Project from PS",
+      "skills": [
+        "Node.js"
+      ],
+      "budget": "5000",
+      "deadline": "",
+      "description": "Created from PowerShell",
+      "createdAt": "2026-02-09T19:52:36.482Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected",
+      "chosenApplication": "89ae7418-689c-484c-a29b-3410048043a4"
+    },
+    {
+      "id": "6e237773-5e2a-44ff-ae63-384a7d21ce7f",
+      "title": "Smoke Project 3",
+      "skills": [
+        "JS"
+      ],
+      "budget": "3000",
+      "deadline": "",
+      "description": "smoke3",
+      "createdAt": "2026-02-09T20:15:44.069Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected",
+      "chosenApplication": "0b621d7f-3045-4a46-93a3-265c7dfa4672"
+    },
+    {
+      "id": "986013fd-162c-4757-9ad1-8b3518984475",
+      "title": "python developer",
+      "skills": [
+        "python"
+      ],
+      "budget": "20000",
+      "deadline": "2026-02-18",
+      "description": "i know python very well ",
+      "createdAt": "2026-02-09T20:18:36.489Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected"
+    },
+    {
+      "id": "449e815a-2ea0-4cc6-8eb1-2f01f1a07ab2",
+      "title": "python developer",
+      "skills": [
+        "python"
+      ],
+      "budget": "20000",
+      "deadline": "2026-02-18",
+      "description": "i know python very well ",
+      "createdAt": "2026-02-09T20:18:49.223Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected"
+    },
+    {
+      "id": "574f3e66-0527-4701-b3d4-20cd7ed45839",
+      "title": "python developer",
+      "skills": [
+        "python"
+      ],
+      "budget": "20000",
+      "deadline": "2026-02-18",
+      "description": "i know python very well ",
+      "createdAt": "2026-02-09T20:18:53.494Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected"
+    },
+    {
+      "id": "1e1a076e-2267-4440-8e42-e20fc6081e26",
+      "title": "AutoRun Project",
+      "skills": [
+        "JS"
+      ],
+      "budget": "500",
+      "deadline": "",
+      "description": "auto-run",
+      "createdAt": "2026-02-10T05:07:34.515Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected",
+      "chosenApplication": "9febad7e-3910-40fe-8044-5cc6711e63a7"
+    },
+    {
+      "id": "8e2a37de-cddd-4c63-a60b-955068c1918c",
+      "title": "website making",
+      "skills": [],
+      "budget": "",
+      "deadline": "",
+      "description": "",
+      "createdAt": "2026-02-10T05:32:26.733Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected"
+    },
+    {
+      "id": "0873d32e-47a7-44f0-8ae2-d2d65c72fc60",
+      "title": "website making",
+      "skills": [
+        "Html",
+        "CSS",
+        "Javascript"
+      ],
+      "budget": "5000",
+      "deadline": "2026-02-26",
+      "description": "to make a working model website \n",
+      "createdAt": "2026-02-10T05:34:03.211Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected"
+    },
+    {
+      "id": "cb7db71b-1d77-4690-aa23-6954ecbbef7d",
+      "title": "website making",
+      "skills": [
+        "Html",
+        "CSS",
+        "Javascript"
+      ],
+      "budget": "5000",
+      "deadline": "2026-02-26",
+      "description": "to make a working model website \n",
+      "createdAt": "2026-02-10T05:34:06.669Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected"
+    },
+    {
+      "id": "c4d69e22-dfe9-4bdd-a992-b672a0d7365e",
+      "title": "frontend devloper",
+      "skills": [
+        "Html",
+        "CSS",
+        "Javascript"
+      ],
+      "budget": "5000",
+      "deadline": "2026-02-28",
+      "description": "",
+      "createdAt": "2026-02-10T06:16:20.708Z",
+      "scamRisk": 0.05,
+      "scamReason": "Demo mode: No scam detected"
+    }
+  ],
+  "applications": [
+    {
+      "id": "89ae7418-689c-484c-a29b-3410048043a4",
+      "projectId": "fe65e03b-3bf0-45f4-9cea-2e53cb7560cf",
+      "userId": "freelancer1",
+      "freelancer": {
+        "bio": "Experienced dev",
+        "name": "Test Freelancer",
+        "skills": [
+          "Node.js"
+        ]
+      },
+      "proposal": {
+        "text": ""
+      },
+      "status": "accepted",
+      "createdAt": "2026-02-09T19:52:57.263Z"
+    },
+    {
+      "id": "0b621d7f-3045-4a46-93a3-265c7dfa4672",
+      "projectId": "6e237773-5e2a-44ff-ae63-384a7d21ce7f",
+      "userId": "smoketester3",
+      "freelancer": {
+        "bio": "test3",
+        "name": "Smoke Tester 3",
+        "skills": [
+          "JS"
+        ]
+      },
+      "proposal": {
+        "text": ""
+      },
+      "status": "accepted",
+      "createdAt": "2026-02-09T20:15:44.084Z"
+    },
+    {
+      "id": "46580eda-aa0b-4248-a071-c99a15f9b3fb",
+      "projectId": "demo-1",
+      "userId": "anon",
+      "freelancer": {
+        "skills": [
+          "python"
+        ],
+        "experience": "1-2 years",
+        "jobType": "Full-time"
+      },
+      "proposal": {
+        "text": ""
+      },
+      "status": "applied",
+      "createdAt": "2026-02-09T20:17:08.432Z"
+    },
+    {
+      "id": "ae37e405-20ed-4eea-b200-576e3d3ac289",
+      "projectId": "demo-1",
+      "userId": "anon",
+      "freelancer": {
+        "skills": [
+          "UI/UX"
+        ],
+        "experience": "Less than 1 year",
+        "jobType": "Long-term"
+      },
+      "proposal": {
+        "text": ""
+      },
+      "status": "applied",
+      "createdAt": "2026-02-09T22:42:08.854Z"
+    },
+    {
+      "id": "9febad7e-3910-40fe-8044-5cc6711e63a7",
+      "projectId": "1e1a076e-2267-4440-8e42-e20fc6081e26",
+      "userId": "autotester",
+      "freelancer": {
+        "bio": "auto",
+        "name": "AutoTester",
+        "skills": [
+          "JS"
+        ]
+      },
+      "proposal": {
+        "text": ""
+      },
+      "score": 100,
+      "status": "accepted",
+      "createdAt": "2026-02-10T05:07:34.553Z"
+    },
+    {
+      "id": "f81d8359-522e-4c19-af8d-8b7d016be207",
+      "projectId": "demo-1",
+      "userId": "anon",
+      "freelancer": {
+        "skills": [
+          "python"
+        ],
+        "experience": "1-2 years",
+        "jobType": "Long-term"
+      },
+      "proposal": {
+        "text": ""
+      },
+      "score": 0,
+      "status": "applied",
+      "createdAt": "2026-02-10T05:19:37.468Z"
+    },
+    {
+      "id": "89d3060d-a17b-4352-b96c-6654dc05126c",
+      "projectId": "demo-1",
+      "userId": "anon",
+      "freelancer": {
+        "skills": [
+          "html",
+          "css",
+          "javascript"
+        ],
+        "experience": "Less than 1 year",
+        "jobType": "Short-term"
+      },
+      "proposal": {
+        "text": ""
+      },
+      "score": 75,
+      "status": "applied",
+      "createdAt": "2026-02-10T05:35:01.418Z"
+    },
+    {
+      "id": "f102ba79-7cc4-4ffd-9d15-7045ff7172bb",
+      "projectId": "demo-3",
+      "userId": "anon",
+      "freelancer": {
+        "skills": [
+          "html",
+          "css",
+          "javascript"
+        ],
+        "experience": "Less than 1 year",
+        "jobType": "Short-term"
+      },
+      "proposal": {
+        "text": ""
+      },
+      "score": 33,
+      "status": "applied",
+      "createdAt": "2026-02-10T05:35:18.200Z"
+    }
+  ],
+  "users": []
+}

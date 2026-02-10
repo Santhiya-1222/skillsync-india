@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SkillSync India — Connect & Grow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">SkillSync<span class="dot">.</span></a>
+        <ul class="nav-links">
+          <li><a href="findwork.html">Find Work</a></li>
+          <li><a href="postproject.html">Post Project</a></li>
+          <li><a href="resume-builder.html">Resume Builder</a></li>
+          <li><a href="client-dashboard.html">Dashboard</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="postproject.html" class="btn btn-primary">Post a Project</a>
+          <a href="findwork.html" class="btn btn-ghost">Find Work</a>
+        </div>
+      </nav>
+      <div class="hero container">
+        <div class="hero-left">
+          <h1>Hire India's best freelancers — fast, fair, human.</h1>
+          <p class="sub">Smart matching, verified proposals, and tools that help remote teams move faster.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="postproject.html">Post a Project</a>
+            <a class="btn btn-outline btn-lg" href="findwork.html">Find Work</a>
+          </div>
+        </div>
+        <div class="hero-right">
+            <div class="card stats-card">
+              <div class="stat"><div id="freelancerCount" class="stat-value">0</div><div class="stat-label">Freelancers</div></div>
+              <div class="stat"><div id="projectCount" class="stat-value">0</div><div class="stat-label">Projects</div></div>
+              <div class="stat"><div id="satisfactionCount" class="stat-value">0%</div><div class="stat-label">Satisfaction</div></div>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="features">
+        <h2 class="section-title">How it works</h2>
+        <div class="grid-3">
+          <article class="card feature">
+            <h3>Post your brief</h3>
+            <p>Describe outcomes, not tasks. Our matching recommends the best talent.</p>
+          </article>
+          <article class="card feature">
+            <h3>Review proposals</h3>
+            <p>Get AI-suggested proposals you can customize and send in seconds.</p>
+          </article>
+          <article class="card feature">
+            <h3>Hire confidently</h3>
+            <p>Secure payments and transparent milestones for every project.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="featured-jobs">
+        <h2 class="section-title">Featured projects</h2>
+        <div id="jobsGrid" class="grid-3">
+          <!-- dynamic project cards loaded by existing `js/main.js` -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>SkillSync</h4>
+          <p>Connecting talented freelancers with great clients across India.</p>
+        </div>
+        <div>
+          <h5>Product</h5>
+          <ul>
+            <li><a href="postproject.html">Post Project</a></li>
+            <li><a href="findwork.html">Find Work</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container copyright">© 2026 SkillSync India</div>
+    </footer>
+
+    <!-- Chatbot widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+      <div class="chatbot-header">
+        <h3>SkillSync AI</h3>
+        <button id="chatbot-close" class="chatbot-close">✕</button>
+      </div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="message bot">Hi! 👋 I'm the SkillSync AI assistant. How can I help?</div>
+      </div>
+      <input id="chatbot-input" class="chatbot-input" placeholder="Ask me anything...">
+    </div>
+    <button id="chatbot-toggle" class="chatbot-toggle">💬 Chat</button>
+
+    <!-- Spark effect removed for MVP -->
+
+    <script src="js/main.js?v=1"></script>
+    <script src="js/app.js?v=4"></script>
+    <script src="js/chatbot.js?v=1"></script>
+    <script src="js/cursor-glow.js"></script>
+  </body>
+</html>

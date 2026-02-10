@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resume Builder - SkillSync India</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .resume-preview {
+            background: linear-gradient(135deg, var(--dark-card) 0%, rgba(22, 33, 62, 0.9) 100%);
+            border: 2px solid var(--cyan);
+            box-shadow: var(--glow-cyan);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            color: var(--light-text);
+            font-family: 'Segoe UI', sans-serif;
+            min-height: 800px;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .resume-header {
+            border-bottom: 3px solid var(--cyan);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+        
+        .resume-section-title {
+            color: var(--lime);
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--pink);
+            padding-left: 0.75rem;
+        }
+        
+        .resume-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .resume-item-title {
+            color: var(--cyan);
+            font-weight: 800;
+            font-size: 1rem;
+        }
+        
+        .resume-item-subtitle {
+            color: var(--gray-300);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .resume-item-desc {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .form-section {
+            background: linear-gradient(135deg, rgba(0,217,255,0.05) 0%, rgba(255,0,110,0.05) 100%);
+            border: 2px solid var(--purple);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-section-title {
+            color: var(--lime);
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-add {
+            background: linear-gradient(135deg, var(--lime) 0%, var(--cyan) 100%);
+            border: none;
+            color: var(--dark-bg);
+            font-weight: 800;
+            box-shadow: var(--glow-lime);
+        }
+        
+        .btn-add:hover {
+            background: linear-gradient(135deg, var(--cyan) 0%, var(--lime) 100%);
+            color: var(--dark-bg);
+            box-shadow: var(--glow-cyan), 0 0 50px rgba(0, 217, 255, 0.6);
+        }
+        
+        .btn-remove {
+            background: linear-gradient(135deg, var(--pink) 0%, var(--danger) 100%);
+            border: none;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .btn-download {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--warning) 100%);
+            border: none;
+            color: var(--dark-bg);
+            font-weight: 800;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .item-container {
+            background: rgba(22, 33, 62, 0.6);
+            border: 1px solid var(--cyan);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .item-container:hover {
+            border-color: var(--pink);
+            box-shadow: var(--glow-pink);
+        }
+        
+        @media (max-width: 991px) {
+            .resume-preview {
+                position: relative;
+                top: 0;
+                margin-top: 2rem;
+            }
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2) 0%, rgba(255, 0, 110, 0.2) 100%);
+            color: var(--cyan);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: 1px solid var(--cyan);
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">⚡ SkillSync India</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="findwork.html">Find Work</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resume-builder.html">Resume Builder</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center py-6" style="padding: 4rem 2rem;">
+        <div class="container">
+            <h1 class="display-5 fw-900 mb-3 hero-text">📄 Build Your Professional Resume</h1>
+            <p class="lead">Create an impressive resume in minutes by filling your skills, projects, and experience</p>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row">
+            <!-- Form Section -->
+            <div class="col-lg-6">
+                <!-- Personal Info -->
+                <div class="form-section">
+                    <h3 class="form-section-title">👤 Personal Information</h3>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="your.email@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="City, Country">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Professional Summary</label>
+                        <textarea class="form-control" id="summary" rows="4" placeholder="Brief description about yourself..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="form-section">
+                    <h3 class="form-section-title">⚙️ Skills</h3>
+                    <div id="skillsList"></div>
+                    <button class="btn btn-add w-100 mb-2" onclick="addSkill()">+ Add Skill</button>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="form-section">
+                    <h3 class="form-section-title">💼 Projects & Experience</h3>
+                    <div id="projectsList"></div>
+                    <button class="btn btn-add w-100 mb-2" onclick="addProject()">+ Add Project</button>
+                </div>
+
+                <!-- Education Section -->
+                <div class="form-section">
+                    <h3 class="form-section-title">🎓 Education</h3>
+                    <div id="educationList"></div>
+                    <button class="btn btn-add w-100 mb-2" onclick="addEducation()">+ Add Education</button>
+                </div>
+
+                <!-- Actions -->
+                <div class="d-flex gap-2">
+                    <button class="btn btn-download flex-grow-1" onclick="downloadResume()">⬇️ Download Resume (PDF)</button>
+                    <button class="btn btn-primary flex-grow-1" onclick="updatePreview()">🔄 Update Preview</button>
+                </div>
+            </div>
+
+            <!-- Resume Preview -->
+            <div class="col-lg-6">
+                <div class="resume-preview" id="resumePreview">
+                    <div class="resume-header">
+                        <h2 id="previewName" style="color: var(--cyan); margin-bottom: 0.5rem;">Your Name</h2>
+                        <div id="previewContact" style="color: var(--gray-300); font-size: 0.9rem;">
+                            your.email@example.com | +91 XXXXX XXXXX | City, Country
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="resume-section" id="summarySection" style="display: none;">
+                        <div class="resume-section-title">Professional Summary</div>
+                        <div id="previewSummary" class="resume-item-desc"></div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="resume-section" id="skillsSection" style="display: none;">
+                        <div class="resume-section-title">Skills</div>
+                        <div id="previewSkills"></div>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="resume-section" id="projectsSection" style="display: none;">
+                        <div class="resume-section-title">Projects & Experience</div>
+                        <div id="previewProjects"></div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="resume-section" id="educationSection" style="display: none;">
+                        <div class="resume-section-title">Education</div>
+                        <div id="previewEducation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-5">
+        <div class="container">
+            <p class="text-muted mb-0">&copy; 2026 SkillSync India. Building Careers, One Resume at a Time.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        let skillCount = 0;
+        let projectCount = 0;
+        let educationCount = 0;
+
+        function addSkill() {
+            const skillsList = document.getElementById('skillsList');
+            const skillId = `skill-${skillCount++}`;
+            const skillHTML = `
+                <div class="item-container" id="${skillId}">
+                    <div class="d-flex gap-2 mb-2">
+                        <input type="text" class="form-control form-control-sm" placeholder="Skill name (e.g., JavaScript, Python, Web Design)" onchange="updatePreview()">
+                        <button class="btn btn-remove btn-sm" onclick="removeElement('${skillId}')">✕</button>
+                    </div>
+                </div>
+            `;
+            skillsList.insertAdjacentHTML('beforeend', skillHTML);
+        }
+
+        function addProject() {
+            const projectsList = document.getElementById('projectsList');
+            const projectId = `project-${projectCount++}`;
+            const projectHTML = `
+                <div class="item-container" id="${projectId}">
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem;">Project Title</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="Project name" onchange="updatePreview()">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem;">Duration</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="e.g., Jan 2024 - Present" onchange="updatePreview()">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem;">Description</label>
+                        <textarea class="form-control form-control-sm" rows="3" placeholder="What did you do? What was your role?" onchange="updatePreview()"></textarea>
+                    </div>
+                    <button class="btn btn-remove btn-sm w-100" onclick="removeElement('${projectId}')">Remove Project</button>
+                </div>
+            `;
+            projectsList.insertAdjacentHTML('beforeend', projectHTML);
+        }
+
+        function addEducation() {
+            const educationList = document.getElementById('educationList');
+            const educationId = `education-${educationCount++}`;
+            const educationHTML = `
+                <div class="item-container" id="${educationId}">
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem;">Degree</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="e.g., Bachelor of Technology" onchange="updatePreview()">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem;">Institution</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="University/College name" onchange="updatePreview()">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight: 700; color: var(--cyan); margin-bottom: 0.5rem;">Year</label>
+                        <input type="text" class="form-control form-control-sm" placeholder="e.g., 2020 - 2024" onchange="updatePreview()">
+                    </div>
+                    <button class="btn btn-remove btn-sm w-100" onclick="removeElement('${educationId}')">Remove Education</button>
+                </div>
+            `;
+            educationList.insertAdjacentHTML('beforeend', educationHTML);
+        }
+
+        function removeElement(id) {
+            document.getElementById(id).remove();
+            updatePreview();
+        }
+
+        function updatePreview() {
+            // Personal Info
+            const fullName = document.getElementById('fullName').value || 'Your Name';
+            const email = document.getElementById('email').value || 'your.email@example.com';
+            const phone = document.getElementById('phone').value || '+91 XXXXX XXXXX';
+            const location = document.getElementById('location').value || 'City, Country';
+            const summary = document.getElementById('summary').value;
+
+            document.getElementById('previewName').textContent = fullName;
+            document.getElementById('previewContact').innerHTML = 
+                `${email} | ${phone} | ${location}`;
+
+            // Summary
+            const summarySection = document.getElementById('summarySection');
+            if (summary.trim()) {
+                summarySection.style.display = 'block';
+                document.getElementById('previewSummary').textContent = summary;
+            } else {
+                summarySection.style.display = 'none';
+            }
+
+            // Skills
+            const skillInputs = document.querySelectorAll('#skillsList input');
+            const skills = Array.from(skillInputs)
+                .map(input => input.value.trim())
+                .filter(skill => skill);
+
+            const skillsSection = document.getElementById('skillsSection');
+            if (skills.length > 0) {
+                skillsSection.style.display = 'block';
+                document.getElementById('previewSkills').innerHTML = 
+                    skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+            } else {
+                skillsSection.style.display = 'none';
+            }
+
+            // Projects
+            const projectContainers = document.querySelectorAll('#projectsList .item-container');
+            let projectsHTML = '';
+            projectContainers.forEach(container => {
+                const inputs = container.querySelectorAll('input, textarea');
+                const title = inputs[0].value.trim();
+                const duration = inputs[1].value.trim();
+                const desc = inputs[2].value.trim();
+                
+                if (title || duration || desc) {
+                    projectsHTML += `
+                        <div class="resume-item">
+                            <div class="resume-item-title">${title || 'Untitled Project'}</div>
+                            ${duration ? `<div class="resume-item-subtitle">${duration}</div>` : ''}
+                            ${desc ? `<div class="resume-item-desc">${desc}</div>` : ''}
+                        </div>
+                    `;
+                }
+            });
+
+            const projectsSection = document.getElementById('projectsSection');
+            if (projectsHTML) {
+                projectsSection.style.display = 'block';
+                document.getElementById('previewProjects').innerHTML = projectsHTML;
+            } else {
+                projectsSection.style.display = 'none';
+            }
+
+            // Education
+            const educationContainers = document.querySelectorAll('#educationList .item-container');
+            let educationHTML = '';
+            educationContainers.forEach(container => {
+                const inputs = container.querySelectorAll('input');
+                const degree = inputs[0].value.trim();
+                const institution = inputs[1].value.trim();
+                const year = inputs[2].value.trim();
+                
+                if (degree || institution || year) {
+                    educationHTML += `
+                        <div class="resume-item">
+                            <div class="resume-item-title">${degree || 'Degree'}</div>
+                            ${institution ? `<div class="resume-item-subtitle">${institution}</div>` : ''}
+                            ${year ? `<div class="resume-item-desc">${year}</div>` : ''}
+                        </div>
+                    `;
+                }
+            });
+
+            const educationSection = document.getElementById('educationSection');
+            if (educationHTML) {
+                educationSection.style.display = 'block';
+                document.getElementById('previewEducation').innerHTML = educationHTML;
+            } else {
+                educationSection.style.display = 'none';
+            }
+        }
+
+        function downloadResume() {
+            const element = document.getElementById('resumePreview');
+            const fullName = document.getElementById('fullName').value || 'resume';
+            
+            const opt = {
+                margin: 10,
+                filename: `${fullName.replace(/\s+/g, '_')}_resume.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        }
+
+        // Initialize with empty state
+        updatePreview();
+    </script>
+</body>
+</html>

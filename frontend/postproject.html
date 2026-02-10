@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post Project - SkillSync India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=2">
+  </head>
+  <body>
+    <nav class="nav-compact container">
+      <a class="brand" href="index.html">SkillSync<span class="dot">.</span></a>
+      <div class="nav-compact-actions">
+        <a class="btn btn-ghost" href="findwork.html">Find Work</a>
+        <a class="btn btn-primary" href="index.html">Home</a>
+      </div>
+    </nav>
+
+    <main class="container section">
+      <div class="center-card">
+        <h1>Post a project and get intelligent matches</h1>
+        <p class="muted">Share project goals, budget and skills — our AI suggests high-quality freelancers.</p>
+
+        <div class="card form-card">
+          <form id="projectForm">
+            <label class="label">Project title</label>
+            <input id="title" class="form-input" placeholder="e.g. Build responsive landing page" required />
+
+            <label class="label">Required skills</label>
+            <input id="skills" class="form-input" placeholder="React, Next.js, UI/UX" />
+
+            <div class="form-row">
+              <div>
+                <label class="label">Budget (INR)</label>
+                <input id="budget" class="form-input" placeholder="e.g. 5000-15000">
+              </div>
+              <div>
+                <label class="label">Deadline</label>
+                <input id="deadline" type="date" class="form-input">
+              </div>
+            </div>
+
+            <label class="label">Description</label>
+            <textarea id="description" class="form-input" rows="5" placeholder="Describe goals and deliverables"></textarea>
+
+            <button type="submit" class="btn btn-primary w-100">Post Project & Get Matches</button>
+          </form>
+
+          <div id="result" class="mt-4"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Chatbot widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+      <div class="chatbot-header">
+        <h3>SkillSync AI</h3>
+        <button id="chatbot-close" class="chatbot-close">✕</button>
+      </div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="message bot">Hi! 👋 I'm the SkillSync AI assistant. How can I help?</div>
+      </div>
+      <input id="chatbot-input" class="chatbot-input" placeholder="Ask me anything...">
+    </div>
+    <button id="chatbot-toggle" class="chatbot-toggle">💬 Chat</button>
+
+    <canvas id="sparkCanvas" style="position:fixed;left:0;top:0;width:100%;height:100%;display:block;pointer-events:none;z-index:9999;background:rgba(0,0,0,0.01);"></canvas>
+
+    <script src="js/main.js?v=1"></script>
+    <script src="js/app.js?v=4"></script>
+    <script src="js/chatbot.js?v=1"></script>
+  </body>
+</html>
