@@ -59,5 +59,15 @@ Next steps (suggestions)
 - Add user authentication (Firebase Auth) for clients and freelancers.
 - Add pagination and better ranking logic in the matching endpoint.
 - Improve prompt engineering for Gemini to produce more stable JSON outputs.
+- ## How to Run Locally
+
+### Backend
+
+```bash
+cd backend
+npm install
+node server.js
+
 
 Enjoy building SkillSync India!
+
